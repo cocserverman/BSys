@@ -24,6 +24,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
 find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Core)
 
     qt_add_executable(BKsim
         MANUAL_FINALIZATION
@@ -32,6 +35,9 @@ find_package(Qt6 REQUIRED COMPONENTS Core)
         admin.h admin.cpp
         customer.h customer.cpp
         financialacc.h financialacc.cpp
+        nonprofitacc.h nonprofitacc.cpp
+        depoacc.h depoacc.cpp
+        mainacc.h mainacc.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET BKsim APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
@@ -52,6 +58,9 @@ else()
 endif()
 
 target_link_libraries(BKsim PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(BKsim PRIVATE Qt6::Core)
+target_link_libraries(BKsim PRIVATE Qt6::Core)
+target_link_libraries(BKsim PRIVATE Qt6::Core)
 target_link_libraries(BKsim PRIVATE Qt6::Core)
 target_link_libraries(BKsim PRIVATE Qt6::Core)
 target_link_libraries(BKsim PRIVATE Qt6::Core)

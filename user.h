@@ -1,8 +1,9 @@
 #ifndef USER_H
 #define USER_H
 
-#include <string>
 #include <QObject>
+#include <string>
+#include"financialacc.h"
 
 class User : public QObject
 {
@@ -16,7 +17,7 @@ private:
     int age;
     string UserName;
     string Password;
-
+    //*ACC?
 signals:
 };
 
