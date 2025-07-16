@@ -13,7 +13,7 @@ private:
     string AccNumber;
     string WireNumber;
     int CVV2;
-    QDate Exp;
+    QDate CardExp;
     int MainPass;
     int StaticSecPass;
     int VariableSecPass;
