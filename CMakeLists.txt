@@ -20,9 +20,14 @@ set(PROJECT_SOURCES
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
+    find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Core)
+
     qt_add_executable(BKsim
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        user.h user.cpp
+        admin.h admin.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET BKsim APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
@@ -43,6 +48,8 @@ else()
 endif()
 
 target_link_libraries(BKsim PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(BKsim PRIVATE Qt6::Core)
+target_link_libraries(BKsim PRIVATE Qt6::Core)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
