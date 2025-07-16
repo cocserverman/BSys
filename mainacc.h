@@ -9,6 +9,7 @@ class MainAcc : public FinancialAcc
     Q_OBJECT
 public:
     explicit MainAcc(QObject *parent = nullptr);
+    double IntRate;
 };
 
 #endif // MAINACC_H

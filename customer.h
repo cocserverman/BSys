@@ -4,11 +4,13 @@
 #include <QObject>
 #include "user.h"
 
-class Customer : public User
+class Customer : private User
 {
     Q_OBJECT
 public:
     explicit Customer(QObject *parent = nullptr);
+private:
+
 };
 
 #endif // CUSTOMER_H
