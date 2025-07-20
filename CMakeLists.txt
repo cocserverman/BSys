@@ -33,7 +33,7 @@ find_package(Qt6 REQUIRED COMPONENTS Core)
         ${PROJECT_SOURCES}
         User.h User.cpp
         admin.h admin.cpp
-        customer.h customer.cpp
+        Customer.h Customer.cpp
         Account.h Account.cpp
         nonprofitacc.h nonprofitacc.cpp
         depoacc.h depoacc.cpp
