@@ -2,7 +2,7 @@
 #define NONPROFITACC_H
 
 #include <QObject>
-#include "financialacc.h"
+#include "Account.h"
 
 class NonprofitAcc : public FinancialAcc
 {

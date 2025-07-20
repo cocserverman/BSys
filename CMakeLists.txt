@@ -34,7 +34,7 @@ find_package(Qt6 REQUIRED COMPONENTS Core)
         user.h user.cpp
         admin.h admin.cpp
         customer.h customer.cpp
-        financialacc.h financialacc.cpp
+        Account.h Account.cpp
         nonprofitacc.h nonprofitacc.cpp
         depoacc.h depoacc.cpp
         mainacc.h mainacc.cpp

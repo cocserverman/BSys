@@ -2,7 +2,7 @@
 #define DEPOACC_H
 
 #include <QObject>
-#include "financialacc.h"
+#include "Account.h"
 
 class DepoAcc : public FinancialAcc
 {

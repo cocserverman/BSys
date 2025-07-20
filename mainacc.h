@@ -2,7 +2,7 @@
 #define MAINACC_H
 
 #include <QObject>
-#include "financialacc.h"
+#include "Account.h"
 
 class MainAcc : public FinancialAcc
 {

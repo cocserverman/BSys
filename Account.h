@@ -1,5 +1,5 @@
-#ifndef FINANCIALACC_H
-#define FINANCIALACC_H
+#ifndef ACCOUNT_H
+#define ACCOUNT_H
 
 #include <QObject>
 
@@ -22,4 +22,4 @@ private:
 signals:
 };
 
-#endif // FINANCIALACC_H
+#endif // ACCOUNT_H

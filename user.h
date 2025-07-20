@@ -1,24 +1,29 @@
 #ifndef USER_H
 #define USER_H
 
-#include <QObject>
 #include <string>
-#include"financialacc.h"
+#include"Account.h"
 
-class User : public QObject
+class User
 {
-    Q_OBJECT
-public:
-    explicit User(QObject *parent = nullptr);
-private:
-    string Name;
-    string FamilyName;
-    string SocialCode;
+protected:
+    QString firstName;
+    QString lastName;
+    QString nationalID;
     int age;
-    string UserName;
-    string Password;
-    //*ACC?
-signals:
+    QString username;
+    QString password;
+public:
+    User(const QString& firstName,const QString& lastName,const QString& nationalID,int age,const QString& username,const QString& password);
+    virtual ~User()= default;
+    QString getUsername() const;
+    QString getPassword() const;
+    QString getFullName() const;
+    QString getNationalID() const;
+    int getAge() const;
+
+    virtual QString getRole() const=0;
+
 };
 
 #endif // USER_H
