@@ -31,7 +31,7 @@ find_package(Qt6 REQUIRED COMPONENTS Core)
     qt_add_executable(BKsim
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        user.h user.cpp
+        User.h User.cpp
         admin.h admin.cpp
         customer.h customer.cpp
         Account.h Account.cpp

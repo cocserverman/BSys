@@ -2,7 +2,7 @@
 #define ADMIN_H
 
 #include <QObject>
-#include "user.h"
+#include "User.h"
 #include <string>
 
 class Admin : private User
