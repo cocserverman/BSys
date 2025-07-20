@@ -17,6 +17,7 @@ private:
     int MainPass;
     int StaticSecPass;
     int VariableSecPass;
+    int balance;
 
 signals:
 };
