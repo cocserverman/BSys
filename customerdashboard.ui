@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CustomerDashboard</class>
+ <widget class="QWidget" name="CustomerDashboard">
+  <layout class="QVBoxLayout" name="mainLayout">
+   <item><widget class="QLabel" name="welcomeLabel"><property name="text"><string>Welcome, Customer</string></property></widget></item>
+   <item><widget class="QListWidget" name="accountList"/></item>
+   <item><widget class="QPushButton" name="viewDetailsBtn"><property name="text"><string>View Account Details</string></property></widget></item>
+   <item><widget class="QPushButton" name="transferBtn"><property name="text"><string>Card to Card</string></property></widget></item>
+   <item><widget class="QPushButton" name="changePasswordBtn"><property name="text"><string>Change PIN/Password</string></property></widget></item>
+   <item><widget class="QPushButton" name="logoutBtn"><property name="text"><string>Logout</string></property></widget></item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TransferForm</class>
+ <widget class="QWidget" name="TransferForm">
+  <layout class="QFormLayout" name="formLayout">
+   <item row="0" column="0"><widget class="QLabel" name="label_source"><property name="text"><string>Source Account</string></property></widget></item>
+   <item row="0" column="1"><widget class="QComboBox" name="sourceAccountCombo"/></item>
+   <item row="1" column="0"><widget class="QLabel" name="label_dest"><property name="text"><string>Destination Card Number</string></property></widget></item>
+   <item row="1" column="1"><widget class="QLineEdit" name="destCardEdit"/></item>
+   <item row="2" column="0"><widget class="QLabel" name="label_amount"><property name="text"><string>Amount</string></property></widget></item>
+   <item row="2" column="1"><widget class="QLineEdit" name="amountEdit"/></item>
+   <item row="3" column="0"><widget class="QLabel" name="label_pass"><property name="text"><string>Second Password</string></property></widget></item>
+   <item row="3" column="1"><widget class="QLineEdit" name="secondPassEdit"><property name="echoMode"><enum>QLineEdit::Password</enum></property></widget></item>
+   <item row="4" column="1"><widget class="QPushButton" name="transferBtn"><property name="text"><string>Transfer</string></property></widget></item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

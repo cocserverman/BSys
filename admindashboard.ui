@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AdminDashboard</class>
+ <widget class="QWidget" name="AdminDashboard">
+  <layout class="QVBoxLayout" name="mainLayout">
+   <item><widget class="QLabel" name="welcomeLabel"><property name="text"><string>Welcome, Admin</string></property></widget></item>
+   <item><widget class="QPushButton" name="viewUsersBtn"><property name="text"><string>View Users</string></property></widget></item>
+   <item><widget class="QPushButton" name="createAccountBtn"><property name="text"><string>Create Account</string></property></widget></item>
+   <item><widget class="QPushButton" name="logoutBtn"><property name="text"><string>Logout</string></property></widget></item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

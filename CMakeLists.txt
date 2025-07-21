@@ -38,16 +38,15 @@ find_package(Qt6 REQUIRED COMPONENTS Core)
         NonProfitAccount.h NonProfitAccount.cpp
         SavingsAccount.h SavingsAccount.cpp
         MainAccount.h MainAccount.cpp
-        loginwindow.h loginwindow.cpp
-        accountcreationdialog.h accountcreationdialog.cpp
-        admindashboard.h admindashboard.cpp
-        customerdashboard.h customerdashboard.cpp
-        passwordchangeform.h passwordchangeform.cpp
+        loginwindow.h loginwindow.cpp loginwindow.ui
+        accountcreationdialog.h accountcreationdialog.cpp accouncreationdialog.ui
+        admindashboard.h admindashboard.cpp admindashboard.ui
+        customerdashboard.h customerdashboard.cpp customerdashboard.ui
+        passwordchangeform.h passwordchangeform.cpp passwordchangeform.ui
         transaction.h transaction.cpp
-        transferform.h transferform.cpp
-        ../../../../../../D:/Codes/Codes/accountcreationdialog.ui ../../../../../../D:/Codes/Codes/admindashboard.ui ../../../../../../D:/Codes/Codes/customerdashboard.ui ../../../../../../D:/Codes/Codes/loginwindow.ui ../../../../../../D:/Codes/Codes/passwordchangeform.ui ../../../../../../D:/Codes/Codes/transferform.ui
-        ../../../../../../D:/Codes/Codes/accountcreationdialog.ui ../../../../../../D:/Codes/Codes/admindashboard.ui ../../../../../../D:/Codes/Codes/customerdashboard.ui ../../../../../../D:/Codes/Codes/loginwindow.ui ../../../../../../D:/Codes/Codes/passwordchangeform.ui ../../../../../../D:/Codes/Codes/transferform.ui
-        mainwindow.ui
+        transferform.h transferform.cpp transferform.ui
+
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET BKsim APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
