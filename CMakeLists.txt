@@ -14,9 +14,9 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
         main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
+
+
+
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -32,12 +32,22 @@ find_package(Qt6 REQUIRED COMPONENTS Core)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         User.h User.cpp
-        admin.h admin.cpp
+        Admin.h Admin.cpp
         Customer.h Customer.cpp
         Account.h Account.cpp
-        nonprofitacc.h nonprofitacc.cpp
-        depoacc.h depoacc.cpp
-        mainacc.h mainacc.cpp
+        NonProfitAccount.h NonProfitAccount.cpp
+        SavingsAccount.h SavingsAccount.cpp
+        MainAccount.h MainAccount.cpp
+        loginwindow.h loginwindow.cpp
+        accountcreationdialog.h accountcreationdialog.cpp
+        admindashboard.h admindashboard.cpp
+        customerdashboard.h customerdashboard.cpp
+        passwordchangeform.h passwordchangeform.cpp
+        transaction.h transaction.cpp
+        transferform.h transferform.cpp
+        ../../../../../../D:/Codes/Codes/accountcreationdialog.ui ../../../../../../D:/Codes/Codes/admindashboard.ui ../../../../../../D:/Codes/Codes/customerdashboard.ui ../../../../../../D:/Codes/Codes/loginwindow.ui ../../../../../../D:/Codes/Codes/passwordchangeform.ui ../../../../../../D:/Codes/Codes/transferform.ui
+        ../../../../../../D:/Codes/Codes/accountcreationdialog.ui ../../../../../../D:/Codes/Codes/admindashboard.ui ../../../../../../D:/Codes/Codes/customerdashboard.ui ../../../../../../D:/Codes/Codes/loginwindow.ui ../../../../../../D:/Codes/Codes/passwordchangeform.ui ../../../../../../D:/Codes/Codes/transferform.ui
+        mainwindow.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET BKsim APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
