@@ -1,4 +1,5 @@
 #include "AdminDashboard.h"
+#include "accountcreationdialog.h"
 #include <QMessageBox>
 
 AdminDashboard::AdminDashboard(Admin* admin, QMap<QString, User*>& users, QWidget *parent)
@@ -19,5 +20,6 @@ void AdminDashboard::showUserList() {
 }
 
 void AdminDashboard::showCreateAccountDialog() {
-    QMessageBox::information(this, "Create Account", "Account creation UI not implemented here.");
+    AccountCreationDialog* d = new AccountCreationDialog(users,this);
+    d->exec();
 }

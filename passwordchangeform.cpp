@@ -7,7 +7,7 @@ PasswordChangeForm::PasswordChangeForm(Customer* customer, QWidget *parent)
     connect(ui.applyBtn, &QPushButton::clicked, this, &PasswordChangeForm::applyChanges);
 }
 
-void applyChanges() {
+void PasswordChangeForm::applyChanges() {
     QString newPin = ui.newPinEdit->text();
     QString newSecond = ui.newSecondPassEdit->text();
 

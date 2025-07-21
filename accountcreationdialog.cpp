@@ -3,6 +3,7 @@
 #include "SavingsAccount.h"
 #include "NonProfitAccount.h"
 #include <QMessageBox>
+#include<QRandomGenerator>
 
 AccountCreationDialog::AccountCreationDialog(QMap<QString, User*>& users, QWidget *parent)
     : QDialog(parent), users(users) {
@@ -31,10 +32,10 @@ void AccountCreationDialog::createAccount() {
         return;
     }
 
-    QString card = "411122223333" + QString::number(Qrand() % 10000).rightJustified(4, '0');
-    QString iban = "IR" + QString::number(1000000 + Qrand() % 8999999);
-    QString acc = "ACC" + QString::number(Qrand() % 99999);
-    QString cvv = QString::number(100 + Qrand() % 899);
+    QString card = "411122223333" + (QString::number(QRandomGenerator::global()->bounded(10000))).rightJustified(4, '0');
+    QString iban = "IR" + QString::number(QRandomGenerator::global()->bounded(1000000,9999999));
+    QString acc = "ACC" + QString::number(QRandomGenerator::global()->bounded(10000,99999));
+    QString cvv = QString::number(QRandomGenerator::global()->bounded(100,999));
     QDate exp = QDate::currentDate().addYears(3);
     QString pin = "1234";
     QString pass = "5678";

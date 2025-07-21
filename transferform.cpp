@@ -13,7 +13,7 @@ TransferForm::TransferForm(Customer* customer, QWidget *parent)
     connect(ui.transferBtn, &QPushButton::clicked, this, &TransferForm::makeTransfer);
 }
 
-void makeTransfer() {
+void TransferForm::makeTransfer() {
     int idx = ui.sourceAccountCombo->currentIndex();
     if (idx < 0 || idx >= customer->getAccounts().size()) return;
 

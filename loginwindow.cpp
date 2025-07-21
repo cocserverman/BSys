@@ -24,8 +24,8 @@ void LoginWindow::loadSampleData() {
 }
 
 void LoginWindow::handleLogin() {
-    QString username = Ui.usernameEdit->text();
-    QString password = Ui.passwordEdit->text();
+    QString username = ui.usernameEdit->text();
+    QString password = ui.passwordEdit->text();
 
     if (!users.contains(username)) return;
 
