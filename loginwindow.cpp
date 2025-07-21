@@ -12,7 +12,7 @@ LoginWindow::LoginWindow(QWidget *parent)
 
 LoginWindow::~LoginWindow() {}
 
-void loadSampleData() {
+void LoginWindow::loadSampleData() {
     Admin* admin = new Admin("Ali", "Ahmadi", "1234567890", 35, "admin", "admin123");
     Customer* cust = new Customer("Sara", "Karimi", "1112223334", 28, "sara", "pass123");
 
@@ -23,9 +23,9 @@ void loadSampleData() {
     users.insert(cust->getUsername(), cust);
 }
 
-void handleLogin() {
-    QString username = ui.usernameEdit->text();
-    QString password = ui.passwordEdit->text();
+void LoginWindow::handleLogin() {
+    QString username = Ui.usernameEdit->text();
+    QString password = Ui.passwordEdit->text();
 
     if (!users.contains(username)) return;
 

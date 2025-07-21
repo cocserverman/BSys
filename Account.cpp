@@ -4,28 +4,28 @@
 Account::Account(const QString& c, const QString& i, const QString& a, const QString& cvv, const QDate& e, double b, const QString& p, const QString& sp)
     : cardNumber(c), iban(i), accountNumber(a), cvv2(cvv), expirationDate(e), balance(b), pin(p), staticSecondPass(sp) {}
 
-QString getCardNumber() const { return cardNumber; }
-QString getIBAN() const { return iban; }
-QString getAccountNumber() const { return accountNumber; }
-QString getCVV2() const { return cvv2; }
-QDate getExpirationDate() const { return expirationDate; }
-double getBalance() const { return balance; }
-QString getPin() const { return pin; }
-QString getStaticSecondPass() const { return staticSecondPass; }
-QString getDynamicSecondPass() const { return dynamicSecondPass; }
+QString Account::getCardNumber() const { return cardNumber; }
+QString Account::getIBAN() const { return iban; }
+QString Account::getAccountNumber() const { return accountNumber; }
+QString Account::getCVV2() const { return cvv2; }
+QDate Account::getExpirationDate() const { return expirationDate; }
+double Account::getBalance() const { return balance; }
+QString Account::getPin() const { return pin; }
+QString Account::getStaticSecondPass() const { return staticSecondPass; }
+QString Account::getDynamicSecondPass() const { return dynamicSecondPass; }
 
-void setPin(const QString& newPin) { pin = newPin; }
-void setStaticSecondPass(const QString& pass) { staticSecondPass = pass; }
-void setDynamicSecondPass(const QString& pass) {
+void Account::setPin(const QString& newPin) { pin = newPin; }
+void Account::setStaticSecondPass(const QString& pass) { staticSecondPass = pass; }
+void Account::setDynamicSecondPass(const QString& pass) {
     dynamicSecondPass = pass;
     dynamicGeneratedTime = QDateTime::currentDateTime();
 }
 
-bool validatePin(const QString& input) const {
+bool Account::validatePin(const QString& input) const {
     return input == pin;
 }
 
-bool validateSecondPass(const QString& input, bool isDynamic) {
+bool Account::validateSecondPass(const QString& input, bool isDynamic) {
     if (isDynamic) {
         bool valid = input == dynamicSecondPass;
         if (valid) dynamicSecondPass.clear();
@@ -35,11 +35,11 @@ bool validateSecondPass(const QString& input, bool isDynamic) {
     }
 }
 
-void deposit(double amount) {
+void Account::deposit(double amount) {
     if (amount > 0) balance += amount;
 }
 
-bool withdraw(double amount) {
+bool Account::withdraw(double amount) {
     if (balance >= amount && amount > 0) {
         balance -= amount;
         return true;
@@ -47,18 +47,18 @@ bool withdraw(double amount) {
     return false;
 }
 
-void applyProfit() {}
-bool isAccountExpired() const { return false; }
+void Account::applyProfit() {}
+bool Account::isAccountExpired() const { return false; }
 
-void addTransaction(Transaction* t) {
+void Account::addTransaction(Transaction* t) {
     transactions.append(t);
 }
 
-QList<Transaction*> getTransactions() const {
+QList<Transaction*> Account::getTransactions() const {
     return transactions;
 }
 
-double getTransferredToday() const {
+double Account::getTransferredToday() const {
     double total = 0;
     QDate today = QDate::currentDate();
     for (Transaction* t : transactions) {

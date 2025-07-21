@@ -3,19 +3,19 @@
 User::User(const QString& firstName,const QString& lastName,const QString& nationalID,int age,const QString& username,const QString& password)
     : firstName(firstName),lastName(lastName),nationalID(nationalID),age(age),username(username),password(password) {}
 
-QString getUsername() const {
+QString User::getUsername() const {
     return username;
 }
-QString getPassword() const {
+QString User::getPassword() const {
     return password;
 }
-QString getFullName() const {
+QString User::getFullName() const {
     return firstName + " " + lastName;
 }
-QString getNationalID() const {
+QString User::getNationalID() const {
     return nationalID;
 }
-int getAge() const {
+int User::getAge() const {
     return age;
 }
 

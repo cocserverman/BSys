@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>LoginForm</class>
- <widget class="QWidget" name="LoginForm">
+ <class>Loginwindow</class>
+ <widget class="QWidget" name="LoginWindow">
+ <property name="WindowTitle">
+ <string>Bank Login</string>
+ </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLabel" name="label_title">
-     <property name="text"><string>Bank Login</string></property>
-     <property name="alignment"><set>Qt::AlignCenter</set></property>
+    <widget class="QLabel" name="labeltitle">
+     <property name="text">
+     <string>Login to Bank System</string>
+     </property>
+     <property name="alignment">
+     <set>Qt::AlignCenter</set>
+     </property>
     </widget>
    </item>
-   <item><widget class="QLineEdit" name="usernameEdit"><property name="placeholderText"><string>Username</string></property></widget></item>
-   <item><widget class="QLineEdit" name="passwordEdit"><property name="echoMode"><enum>QLineEdit::Password</enum><property name="placeholderText"><string>Password</string></property></widget></item>
-   <item><widget class="QPushButton" name="loginButton"><property name="text"><string>Login</string></property></widget></item>
+   <item>
+   <widget class="QLineEdit" name="usernameEdit">
+   <property name="placeholderText">
+   <string>Username</string>
+   </property>
+   </widget>
+   </item>
+   <item>
+   <widget class="QLineEdit" name="passwordEdit">
+   <property name="placeholderText">
+   <string>Password</string>
+   </property>
+   <property name="echomode">
+   <enum>QLineEdit::Password</enum>
+   </property>
+  </widget>
+  </item>
+   <item>
+   <widget class="QPushButton" name="loginButton">
+   <property name="text">
+   <string>Login</string>
+   </property>
+   </widget>
+   </item>
   </layout>
  </widget>
  <resources/>

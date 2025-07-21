@@ -10,7 +10,7 @@ AdminDashboard::AdminDashboard(Admin* admin, QMap<QString, User*>& users, QWidge
     connect(ui.logoutBtn, &QPushButton::clicked, this, &QWidget::close);
 }
 
-void showUserList() {
+void AdminDashboard::showUserList() {
     QString list;
     for (auto user : users) {
         list += user->getFullName() + " - " + user->getRole() + "\n";
@@ -18,6 +18,6 @@ void showUserList() {
     QMessageBox::information(this, "User List", list);
 }
 
-void showCreateAccountDialog() {
+void AdminDashboard::showCreateAccountDialog() {
     QMessageBox::information(this, "Create Account", "Account creation UI not implemented here.");
 }

@@ -6,7 +6,7 @@
 #include "CustomerDashboard.h"
 #include "Admin.h"
 #include "Customer.h"
-#include "ui_LoginForm.h"
+#include "ui_Loginwindow.h"
 #include <QMap>
 
 class LoginWindow : public QWidget {
@@ -20,7 +20,7 @@ private slots:
     void handleLogin();
 
 private:
-    Ui::LoginForm ui;
+    Ui::Loginwindow ui;
     AdminDashboard* adminDashboard;
     CustomerDashboard* customerDashboard;
     QMap<QString, User*> users;

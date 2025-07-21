@@ -12,11 +12,10 @@ private:
 
 public:
     Customer(const QString& firstName,const QString& lastName,const QString& nationalID,int age,const QString& username,const QString& password);
-
+    bool canAddMoreAccounts() const;
     QString getRole() const override;
     QVector<Account*>& getAccounts();
     void addAccount(Account* account);
-    bool canAddMoreAccounts() const;
 
 };
 

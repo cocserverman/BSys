@@ -13,14 +13,14 @@ CustomerDashboard::CustomerDashboard(Customer* customer, QWidget *parent)
     connect(ui.logoutBtn, &QPushButton::clicked, this, &QWidget::close);
 }
 
-void showAccounts() {
+void CustomerDashboard::showAccounts() {
     ui.accountList->clear();
     for (Account* acc : customer->getAccounts()) {
         ui.accountList->addItem(acc->getType() + " - " + acc->getCardNumber());
     }
 }
 
-void viewDetails() {
+void CustomerDashboard::viewDetails() {
     int idx = ui.accountList->currentRow();
     if (idx < 0 || idx >= customer->getAccounts().size()) return;
 
@@ -29,12 +29,12 @@ void viewDetails() {
     QMessageBox::information(this, "Account Info", info);
 }
 
-void openTransferForm() {
+void CustomerDashboard::openTransferForm() {
     TransferForm* form = new TransferForm(customer);
     form->show();
 }
 
-void openPasswordChange() {
+void CustomerDashboard::openPasswordChange() {
     PasswordChangeForm* form = new PasswordChangeForm(customer);
     form->show();
 }

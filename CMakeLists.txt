@@ -38,16 +38,21 @@ find_package(Qt6 REQUIRED COMPONENTS Core)
         NonProfitAccount.h NonProfitAccount.cpp
         SavingsAccount.h SavingsAccount.cpp
         MainAccount.h MainAccount.cpp
-        loginwindow.h loginwindow.cpp loginwindow.ui
-        accountcreationdialog.h accountcreationdialog.cpp accouncreationdialog.ui
-        admindashboard.h admindashboard.cpp admindashboard.ui
-        customerdashboard.h customerdashboard.cpp customerdashboard.ui
-        passwordchangeform.h passwordchangeform.cpp passwordchangeform.ui
+        loginwindow.h loginwindow.cpp
+        accountcreationdialog.h accountcreationdialog.cpp
+        admindashboard.h admindashboard.cpp
+        customerdashboard.h customerdashboard.cpp
+        passwordchangeform.h passwordchangeform.cpp
         transaction.h transaction.cpp
-        transferform.h transferform.cpp transferform.ui
+        transferform.h transferform.cpp
+        admindashboard.ui
+        admindashboard.ui
+        accountcreationdialog.ui
 
-
-    )
+        transferform.ui
+        customerdashboard.ui
+        loginwindow.ui
+        transferform.ui)
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET BKsim APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
 #                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
